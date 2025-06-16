@@ -1,27 +1,41 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="dark">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trang cá nhân của Long</title>
-  <style>
-    body {
-      background-color: #f0f8ff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 100px;
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tự bật dark mode nếu hệ thống đang bật
+    tailwind.config = {
+      darkMode: 'class'
     }
-    h1 {
-      color: #2c3e50;
-      font-size: 36px;
-    }
-    p {
-      color: #34495e;
-      font-size: 20px;
-    }
-  </style>
+  </script>
 </head>
-<body>
-  <h1>Xin chào! Mình là Long</h1>
-  <p>Mình đang học lại lập trình web sau 2 năm thất nghiệp 💪</p>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen flex items-center justify-center p-4">
+  <div class="max-w-xl w-full text-center space-y-6">
+    <!-- 1. Ảnh đại diện -->
+    <img src="https://i.imgur.com/your-avatar.png" alt="https://www.facebook.com/photo.php?fbid=1850831115401478&set=pb.100014238214903.-2207520000&type=3"
+         class="w-32 h-32 mx-auto rounded-full shadow-lg border-4 border-white dark:border-gray-700">
+    
+    <!-- 2. Giới thiệu bản thân (CV) -->
+    <div>
+      <h1 class="text-3xl font-bold">Xin chào! Mình là Long</h1>
+      <p class="mt-2 text-lg">💻 Mình đang học lại lập trình web sau 2 năm thất nghiệp.</p>
+      <p class="text-sm text-gray-500 dark:text-gray-400">🎓 Tốt nghiệp Cao đẳng Ứng dụng phần mềm</p>
+    </div>
+
+    <!-- 3. Nút bật/tắt chế độ tối -->
+    <button id="toggleDark" class="mt-4 px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700">
+      Bật / Tắt chế độ tối
+    </button>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById("toggleDark");
+    toggleBtn.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+    });
+  </script>
 </body>
 </html>
