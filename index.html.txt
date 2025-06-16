@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang cá nhân của Long</title>
+</head>
+<body>
+  <h1>Xin chào! Mình là Long</h1>
+  <p>Mình đang học lại lập trình web sau 2 năm thất nghiệp 💪</p>
+</body>
+</html>
